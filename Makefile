@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -W -Wall
-TARGET = shop
+TARGET = contacts
 OBJECTS = main.o contact.o manager.o
 all : $(TARGET)
 $(TARGET) : $(OBJECTS)

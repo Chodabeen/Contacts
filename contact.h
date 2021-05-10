@@ -7,7 +7,8 @@
 
 typedef struct{
     char name[20];
-    int number;  
+    char number[12];
+    int del;
 }Contact;
 
 int createContact(Contact *p);
