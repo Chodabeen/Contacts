@@ -2,9 +2,9 @@
 
 
 int createContact(Contact *p){
-	printf("ÀÌ¸§Àº? ");
+	printf("ï¿½Ì¸ï¿½ï¿½ï¿½? ");
 	scanf("%s",p->name);
-	printf("¹øÈ£´Â(- ÀÔ·ÂÇÏÁö ¸¶½Ã¿À)? ");
+	printf("ï¿½ï¿½È£ï¿½ï¿½(- ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¿ï¿½)? ");
 	scanf("%s",p->number);
     //printf("%s : %s\n", p->name, p->number);
 	p->del = 0;
@@ -16,11 +16,11 @@ void readContact(Contact p){
 }
 
 int updateContact(Contact *p){
-	printf("ÀÌ¸§Àº? ");
+	printf("ï¿½Ì¸ï¿½ï¿½ï¿½? ");
 	scanf("%s",p->name);
-	printf("¹øÈ£´Â? ");
+	printf("ï¿½ï¿½È£ï¿½ï¿½? ");
 	scanf("%s",p->number);
-	printf("=> ¼öÁ¤µÊ!\n");
+	printf("=> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!\n");
 	return 1;
 }
 
@@ -31,16 +31,16 @@ int deleteContact(Contact *p){
 
 int selectMenu(){
     int menu;
-	printf("\n*** Á¡¼ö°è»ê±â ***\n");
-	printf("1. ¿¬¶ôÃ³ Á¶È¸\n");
-	printf("2. ¿¬¶ôÃ³ Ãß°¡\n");
-	printf("3. ¿¬¶ôÃ³ ¼öÁ¤\n");
-	printf("4. ¿¬¶ôÃ³ »èÁ¦\n");
-	printf("5. ÆÄÀÏÀúÀå\n");
-	printf("6. ¿¬¶ôÃ³ ÀÌ¸§ °Ë»ö\n");
-	printf("7. ¿¬¶ôÃ³ ¹øÈ£ °Ë»ö\n");
-	printf("0. Á¾·á\n\n");
-	printf("=> ¿øÇÏ´Â ¸Þ´º´Â? ");
+	printf("\n*** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ***\n");
+	printf("1. ï¿½ï¿½ï¿½ï¿½Ã³ ï¿½ï¿½È¸\n");
+	printf("2. ï¿½ï¿½ï¿½ï¿½Ã³ ï¿½ß°ï¿½\n");
+	printf("3. ï¿½ï¿½ï¿½ï¿½Ã³ ï¿½ï¿½ï¿½ï¿½\n");
+	printf("4. ï¿½ï¿½ï¿½ï¿½Ã³ ï¿½ï¿½ï¿½ï¿½\n");
+	printf("5. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+	printf("6. ï¿½ï¿½ï¿½ï¿½Ã³ ï¿½Ì¸ï¿½ ï¿½Ë»ï¿½\n");
+	printf("7. ï¿½ï¿½ï¿½ï¿½Ã³ ï¿½ï¿½È£ ï¿½Ë»ï¿½\n");
+	printf("0. ï¿½ï¿½ï¿½ï¿½\n\n");
+	printf("=> ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½? ");
 	scanf("%d", &menu);
 	return menu;
 }
@@ -49,7 +49,7 @@ void searchName(Contact *p, int count){
 	int scnt = 0;
 	char search[20];
 
-	printf("°Ë»öÇÒ ÀÌ¸§? ");
+	printf("ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½? ");
 	scanf("%s", search);
 	printf("****************************\n");
 	for(int i =0; i <count ; i++){
@@ -60,14 +60,14 @@ void searchName(Contact *p, int count){
 			scnt++;
 		}
 	}
-	if(scnt == 0) printf("=> °Ë»öµÈ µ¥ÀÌÅÍ ¾øÀ½!");
+	if(scnt == 0) printf("=> ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!");
 	printf("\n");
 }
 
 void searchNumber(Contact*p, int count){
     int scnt = 0;
 	char search[12];
-	printf("°Ë»öÇÒ ¹øÈ£? ");
+	printf("ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½È£? ");
 	scanf("%s", search);
 	printf("****************************\n");
 	for(int i =0; i <count ; i++){
@@ -78,6 +78,6 @@ void searchNumber(Contact*p, int count){
 			scnt++;
 		}
 	}
-	if(scnt == 0) printf("=> °Ë»öµÈ µ¥ÀÌÅÍ ¾øÀ½!");
+	if(scnt == 0) printf("=> ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!");
 	printf("\n");
 }
