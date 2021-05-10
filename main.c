@@ -19,7 +19,7 @@ int main(void){
 			if(count > 0)
 				listContact(clist, index);
 			else
-				printf("메뉴가 없습니다.");
+				printf("�޴��� �����ϴ�.\n");
 		}
 		else if (menu == 2){
 			count += createContact(&clist[index++]); 
@@ -29,22 +29,22 @@ int main(void){
 			if(no>0)
 				updateContact(&clist[no-1]);
 			else {
-				printf("==>최소됨!!");
+				printf("==>�ּҵ�!!");
 				continue;
 			}
 		}
 		else if (menu == 4){
 			no = selectDataNumber(clist, index);
 			if(no==0){
-				printf("==>최소됨!!");
+				printf("=> ��ҵ�!\n");
 				continue;
 			}else if(no>0){
-				printf("정말로 삭제하시겠습니까?(삭제 :1) ");
+				printf("������ �����Ͻðڽ��ϱ�?(���� :1) ");
 				int delok;
 				scanf("%d",&delok);
 				if(delok==1){
 					int del = deleteContact(&clist[no-1]);
-					if( del == 1) printf("==> 삭제됨!\n");
+					if( del == 1) printf("==> ������!\n");
 					count--;
 				}
 			}
@@ -58,6 +58,6 @@ int main(void){
 			searchNumber(clist,index);
 	    }
     }
-	printf("종료됨!\n");
+	printf("�����!\n");
 	return 0;
 }

@@ -2,9 +2,9 @@
 
 
 int createContact(Contact *p){
-	printf("이름은? ");
+	printf("�̸���? ");
 	scanf("%s",p->name);
-	printf("번호는? (- 입력하지 마시오)");
+	printf("��ȣ��(- �Է����� ���ÿ�)? ");
 	scanf("%s",p->number);
     //printf("%s : %s\n", p->name, p->number);
 	p->del = 0;
@@ -16,11 +16,11 @@ void readContact(Contact p){
 }
 
 int updateContact(Contact *p){
-	printf("이름은? ");
+	printf("�̸���? ");
 	scanf("%s",p->name);
-	printf("번호는? ");
+	printf("��ȣ��? ");
 	scanf("%s",p->number);
-	printf("=> 수정됨!\n");
+	printf("=> ������!\n");
 	return 1;
 }
 
@@ -31,16 +31,16 @@ int deleteContact(Contact *p){
 
 int selectMenu(){
     int menu;
-	printf("\n*** 점수계산기 ***\n");
-	printf("1. 연락처 조회\n");
-	printf("2. 연락처 추가\n");
-	printf("3. 연락처 수정\n");
-	printf("4. 연락처 삭제\n");
-	printf("5. 파일저장\n");
-	printf("6. 연락처 이름 검색\n");
-	printf("7. 연락처 번호 검색\n");
-	printf("0. 종료\n\n");
-	printf("=> 원하는 메뉴는? ");
+	printf("\n*** �������� ***\n");
+	printf("1. ����ó ��ȸ\n");
+	printf("2. ����ó �߰�\n");
+	printf("3. ����ó ����\n");
+	printf("4. ����ó ����\n");
+	printf("5. ��������\n");
+	printf("6. ����ó �̸� �˻�\n");
+	printf("7. ����ó ��ȣ �˻�\n");
+	printf("0. ����\n\n");
+	printf("=> ���ϴ� �޴���? ");
 	scanf("%d", &menu);
 	return menu;
 }
@@ -49,7 +49,7 @@ void searchName(Contact *p, int count){
 	int scnt = 0;
 	char search[20];
 
-	printf("검색할 이름? ");
+	printf("�˻��� �̸�? ");
 	scanf("%s", search);
 	printf("****************************\n");
 	for(int i =0; i <count ; i++){
@@ -60,14 +60,14 @@ void searchName(Contact *p, int count){
 			scnt++;
 		}
 	}
-	if(scnt == 0) printf("=> => 검색된 데이터 없음!");
+	if(scnt == 0) printf("=> �˻��� ������ ����!");
 	printf("\n");
 }
 
 void searchNumber(Contact*p, int count){
     int scnt = 0;
 	char search[12];
-	printf("검색할 번호? ");
+	printf("�˻��� ��ȣ? ");
 	scanf("%s", search);
 	printf("****************************\n");
 	for(int i =0; i <count ; i++){
@@ -78,6 +78,6 @@ void searchNumber(Contact*p, int count){
 			scnt++;
 		}
 	}
-	if(scnt == 0) printf("=> 검색된 데이터 없음!");
+	if(scnt == 0) printf("=> �˻��� ������ ����!");
 	printf("\n");
 }

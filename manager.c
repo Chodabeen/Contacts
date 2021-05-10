@@ -14,7 +14,7 @@ void listContact(Contact *p, int count){
 int selectDataNumber(Contact *p, int count){
     int idx;
 	listContact(p, count);
-	printf("번호는?(취소: 0)");
+	printf("��ȣ��?(���: 0)");
 	scanf("%d",&idx);
 	return idx;
 }
@@ -27,7 +27,7 @@ void saveContactData(Contact *p, int count){
 		fprintf(fp, "%s %s\n", p[i].name, p[i].number);
 	}
 	fclose(fp);
-	printf("=> 저장됨! \n");
+	printf("=> �����! \n");
 
 }
 
@@ -36,7 +36,7 @@ int loadContactData(Contact *p){
 	FILE *fp;
 	fp = fopen("contact.txt","rt");
 	if(fp == NULL) {
-		    printf("=> 파일 없음\n\n");
+		    printf("=> ���� ����\n");
 		    return 0;
 	}
 	for(; i < 100; i++){
@@ -45,7 +45,7 @@ int loadContactData(Contact *p){
 		fscanf(fp, "%s", p[i].number);
 	}
 	fclose(fp);
-	printf("=> 로딩 성공!\n");
+	printf("=> �ε� ����!\n");
 	return i;
 
 }
