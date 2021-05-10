@@ -17,7 +17,7 @@ int main(void){
 
 		if (menu == 1){
 			if(count > 0)
-				listContact(clist, index);
+				listContact(clist, index);ㄴ
 			else
 				printf("�޴��� �����ϴ�.\n");
 		}
