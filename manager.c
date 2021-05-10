@@ -14,7 +14,7 @@ void listContact(Contact *p, int count){
 int selectDataNumber(Contact *p, int count){
     int idx;
 	listContact(p, count);
-	printf("¹øÈ£´Â?(Ãë¼Ò: 0)");
+	printf("ï¿½ï¿½È£ï¿½ï¿½?(ï¿½ï¿½ï¿½: 0)");
 	scanf("%d",&idx);
 	return idx;
 }
@@ -27,7 +27,7 @@ void saveContactData(Contact *p, int count){
 		fprintf(fp, "%s %s\n", p[i].name, p[i].number);
 	}
 	fclose(fp);
-	printf("=> ÀúÀåµÊ! \n");
+	printf("=> ï¿½ï¿½ï¿½ï¿½ï¿½! \n");
 
 }
 
@@ -36,7 +36,7 @@ int loadContactData(Contact *p){
 	FILE *fp;
 	fp = fopen("contact.txt","rt");
 	if(fp == NULL) {
-		    printf("=> ÆÄÀÏ ¾øÀ½\n");
+		    printf("=> ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
 		    return 0;
 	}
 	for(; i < 100; i++){
@@ -45,7 +45,7 @@ int loadContactData(Contact *p){
 		fscanf(fp, "%s", p[i].number);
 	}
 	fclose(fp);
-	printf("=> ·Îµù ¼º°ø!\n");
+	printf("=> ï¿½Îµï¿½ ï¿½ï¿½ï¿½ï¿½!\n");
 	return i;
 
 }
