@@ -19,7 +19,7 @@ int main(void){
 			if(count > 0)
 				listContact(clist, index);
 			else
-				printf("¸Ş´º°¡ ¾ø½À´Ï´Ù.\n");
+				printf("ë©”ë‰´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		else if (menu == 2){
 			count += createContact(&clist[index++]); 
@@ -29,22 +29,22 @@ int main(void){
 			if(no>0)
 				updateContact(&clist[no-1]);
 			else {
-				printf("==>ÃÖ¼ÒµÊ!!");
+				printf("==>ìµœì†Œë¨!!");
 				continue;
 			}
 		}
 		else if (menu == 4){
 			no = selectDataNumber(clist, index);
 			if(no==0){
-				printf("=> Ãë¼ÒµÊ!\n");
+				printf("==>ìµœì†Œë¨!!");
 				continue;
 			}else if(no>0){
-				printf("Á¤¸»·Î »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?(»èÁ¦ :1) ");
+				printf("ì •ë§ë¡œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?(ì‚­ì œ :1) ");
 				int delok;
 				scanf("%d",&delok);
 				if(delok==1){
 					int del = deleteContact(&clist[no-1]);
-					if( del == 1) printf("==> »èÁ¦µÊ!\n");
+					if( del == 1) printf("==> ì‚­ì œë¨!\n");
 					count--;
 				}
 			}
@@ -58,6 +58,6 @@ int main(void){
 			searchNumber(clist,index);
 	    }
     }
-	printf("Á¾·áµÊ!\n");
+	printf("ì¢…ë£Œë¨!\n");
 	return 0;
 }
