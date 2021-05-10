@@ -35,7 +35,7 @@ int selectMenu(){
 	printf("1. 연락처 조회\n");
 	printf("2. 연락처 추가\n");
 	printf("3. 연락처 수정\n");
-	printf("4. 연락처 삭제�\n");
+	printf("4. 연락처 삭제\n");
 	printf("5. 파일저장\n");
 	printf("6. 연락처 이름 검색\n");
 	printf("7. 연락처 번호 검색\n");
