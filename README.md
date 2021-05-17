@@ -1,5 +1,7 @@
 # Contacts
 
+![](https://cdn.pixabay.com/photo/2020/10/28/06/10/smartphone-5692532_1280.jpg)
+
 ## 주제
 아주 간단한 연락처 기능
 
